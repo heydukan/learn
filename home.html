@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subjects Dashboard</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Welcome, <span id="studentName"></span>!</h2>
+    <div class="subjects-grid">
+      <div class="subject-card" onclick="goTo('english')">English</div>
+      <div class="subject-card">Math</div>
+      <div class="subject-card">Chemistry</div>
+      <div class="subject-card">Biology</div>
+    </div>
+  </div>
+
+  <script>
+    // Display saved name
+    document.getElementById("studentName").textContent = localStorage.getItem("studentName");
+
+    function goTo(subject) {
+      if(subject === "english") {
+        window.location.href = "english.html";
+      }
+    }
+  </script>
+</body>
+</html>
